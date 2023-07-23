@@ -28,4 +28,14 @@ public class SelectorsExampleTest {
         WebElement emailInputBox = driver.findElement(By.id("newsletter-input"));
         emailInputBox.sendKeys("ala@makota.pl");
     }
+
+    @Test
+    public void byName() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://hotel-testlab.coderslab.pl/en/");
+
+        WebElement hotelLocationInputBox = driver.findElement(By.name("hotel_location"));
+        hotelLocationInputBox.sendKeys("Warsaw");
+    }
 }
